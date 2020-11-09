@@ -39,7 +39,7 @@ func (c *Config) SetBody(body string) {
 
 func (c *Config) Send() error {
 
-	mailer.SetHeader("From", c.Sender)
+	mailer.SetHeader("From", c.AuthEmail)
 	dialer := gomail.NewDialer(
 		c.Host,
 		c.Port,
