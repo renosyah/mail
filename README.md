@@ -15,12 +15,12 @@ import "github.com/renosyah/mail"
 	mconfig := mail.Config{
 		Host:         "smtp.gmail.com",
 		Port:         587,
-		Sender:       "mail.sender",
-		AuthEmail:    "mail.email",
-		AuthPassword: "mail.password",
+		Sender:       "sender",
+		AuthEmail:    "sender@mail.com",
+		AuthPassword: "senderpassword",
 	}
 
-	mconfig.SetReceivers("example@gmail.com")
+	mconfig.SetReceivers("receiver@gmail.com","receiver2@gmail.com")
 	mconfig.SetSubject("Just Say Hello")
 	mconfig.SetBody("Hello, <b>have a nice day</b>")
 
